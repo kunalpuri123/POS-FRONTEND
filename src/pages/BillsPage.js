@@ -20,7 +20,7 @@ const BillsPage = () => {
     const getAllBills = async () => {
       try {
           dispatch({ type: 'SHOW_LOADING' });
-          const { data } = await axios.get('https://pos-jet-tau.vercel.app/api/bills/get-bills');
+          const { data } = await axios.get('https://pos-zd0e.onrender.com/api/bills/get-bills');
           setBillsData(data);
       } catch (error) {
           console.log(error);

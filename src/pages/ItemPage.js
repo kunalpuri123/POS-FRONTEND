@@ -67,7 +67,7 @@ const handleSubmit = async (value) =>{
   if(editItem  === null){
     try {
       dispatch({ type: 'SHOW_LOADING' });
-      const res = await axios.post('https://pos-zd0e.onrender.com', value);
+      const res = await axios.post('https://pos-zd0e.onrender.com/', value);
       message.success('Item Added Succesfully.')
       getAllItems();
       setPopupModel(false);
@@ -81,7 +81,7 @@ const handleSubmit = async (value) =>{
   else{
     try {
       dispatch({ type: 'SHOW_LOADING' });
-       await axios.put('https://pos-zd0e.onrender.com', {...value, itemId:editItem._id});
+       await axios.put('https://pos-zd0e.onrender.com/', {...value, itemId:editItem._id});
       message.success('Item updated Succesfully.')
       getAllItems();
       setPopupModel(false);
