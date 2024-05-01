@@ -71,7 +71,7 @@ const CartPage = () => {
          
             };
             console.log(newObject)
-            await axios.post('https://pos-jet-tau.vercel.app/api/bills/add-bills', newObject);
+            await axios.post('https://pos-zd0e.onrender.com/api/bills/add-bills', newObject);
             
             message.success('Bill Generated');
             navigate('/bills');

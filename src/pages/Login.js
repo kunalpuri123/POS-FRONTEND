@@ -12,7 +12,7 @@ const Login = () => {
   const handleSubmit = async (values) => {
     try {
       dispatch({ type: 'SHOW_LOADING' });
-      const res = await axios.post('https://pos-jet-tau.vercel.app/api/users/login' , values);
+      const res = await axios.post('https://pos-zd0e.onrender.com/api/users/login' , values);
       message.success('User Login Succesfully.')
       console.log(res.data)
       localStorage.setItem('auth',JSON.stringify(res.data));

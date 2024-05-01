@@ -12,7 +12,7 @@ const Register = () => {
   const handleSubmit = async (value) => {
     try {
       dispatch({ type: 'SHOW_LOADING' });
-      await axios.post('https://pos-jet-tau.vercel.app/api/users/register' , value);
+      await axios.post('https://pos-zd0e.onrender.com/api/users/register' , value);
       message.success('User Registered Succesfully.')
       navigate('/login');
     

@@ -16,7 +16,7 @@ const ItemPage = () => {
   const getAllItems = async () => {
     try {
         dispatch({ type: 'SHOW_LOADING' });
-        const { data } = await axios.get('https://pos-jet-tau.vercel.app/api/items/get-item');
+        const { data } = await axios.get('https://pos-zd0e.onrender.com/api/items/get-item');
         setItemsData(data);
     } catch (error) {
         console.log(error);
@@ -32,7 +32,7 @@ const ItemPage = () => {
 const handleDelete = async (record) => {
   try {
     dispatch({ type: 'SHOW_LOADING' });
-    await axios.post("https://pos-jet-tau.vercel.app/api/items/delete-item", {itemId:record._id});
+    await axios.post("https://pos-zd0e.onrender.com/api/items/delete-item", {itemId:record._id});
     message.success('Item Deleted Successfully.');
     getAllItems();
     setPopupModel(false);
@@ -67,7 +67,7 @@ const handleSubmit = async (value) =>{
   if(editItem  === null){
     try {
       dispatch({ type: 'SHOW_LOADING' });
-      const res = await axios.post('https://pos-jet-tau.vercel.app', value);
+      const res = await axios.post('https://pos-zd0e.onrender.com', value);
       message.success('Item Added Succesfully.')
       getAllItems();
       setPopupModel(false);
@@ -81,7 +81,7 @@ const handleSubmit = async (value) =>{
   else{
     try {
       dispatch({ type: 'SHOW_LOADING' });
-       await axios.put('https://pos-jet-tau.vercel.app', {...value, itemId:editItem._id});
+       await axios.put('https://pos-zd0e.onrender.com', {...value, itemId:editItem._id});
       message.success('Item updated Succesfully.')
       getAllItems();
       setPopupModel(false);
