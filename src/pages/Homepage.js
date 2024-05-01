@@ -30,7 +30,7 @@ const Homepage = () => {
         const getAllItems = async () => {
             try {
                 dispatch({ type: 'SHOW_LOADING' });
-                const { data } = await axios.get('https://pos-zd0e.onrender.com/api/items/get-item');
+                const { data } = await axios.get('https://pos-zd0e.onrender.com/api/items/get-item' , data);
                 setItemsData(data);
             } catch (error) {
                 console.log(error);
